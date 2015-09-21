@@ -149,7 +149,7 @@ var boroughs = L.geoJson(null, {
   onEachFeature: function (feature, layer) {
     boroughSearch.push({
       name: layer.feature.properties.BoroName,
-      source: "Boroughs",
+      source: "",
       id: L.stamp(layer),
       bounds: layer.getBounds()
     });
@@ -330,7 +330,7 @@ var museums = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: L.icon({
-        iconUrl: "assets/img/museum.png",
+        iconUrl: "assets/img/food_bank.png",
         iconSize: [24, 28],
         iconAnchor: [12, 28],
         popupAnchor: [0, -25]
@@ -479,13 +479,9 @@ var baseLayers = {
 
 var groupedOverlays = {
   "Points of Interest": {
-    "<img src='assets/img/theater.png' width='24' height='28'>&nbsp;Theaters": theaterLayer,
-    "<img src='assets/img/museum.png' width='24' height='28'>&nbsp;Museums": museumLayer
+    "<img src='assets/img/grocery.png' width='20' height='20'>&nbsp;Food Distribution": theaterLayer,
+    "<img src='assets/img/food_bank.png' width='20' height='20'>&nbsp;Food Source": museumLayer
   },
-  "Reference": {
-    "Boroughs": boroughs,
-    "Subway Lines": subwayLines
-  }
 };
 
 var layerControl = L.control.groupedLayers(baseLayers, groupedOverlays, {
