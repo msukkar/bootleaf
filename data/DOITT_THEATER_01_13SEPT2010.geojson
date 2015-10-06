@@ -2,8 +2,11 @@
 "type": "FeatureCollection",
                                                                                 
 "features": [
-{ "type": "Feature", "id": 0, "properties": { "NAME": "Alexander Hamilton U.S. Custom House", "TEL": "(212) 514-3700", "URL": "http:\/\/www.oldnycustomhouse.gov\/", "ADRESS1": "1 Bowling Grn", "ADDRESS2": null, "CITY": "New York", "ZIP": 10004.0 }, "geometry": { "type": "Point", "coordinates": [ -74.013756, 40.703817 ] } }
+{ "type": "Feature", "id": 0, "properties": { "NAME": "Kroger Grocery Store", "TEL": "(434) 293-5176‎", "URL": "http:\/\/www.kroger.com", "ADRESS1": "1159 Emmet Street North", "ADDRESS2": null, "CITY": "Charlottesville", "ZIP": 22903.0 }, "geometry": { "type": "Point", "coordinates": [ -78.50050199999998, 38.053409 ] } }
 ,
+{ "type": "Feature", "id": 1, "properties": { "NAME": "Bodos Bagels", "TEL": "(434) 293-6021", "URL": "http:\/\/www.bodosbagels.com", "ADRESS1": "1159 Emmet Street North", "ADDRESS2": null, "CITY": "Charlottesville", "ZIP": 22903.0 }, "geometry": { "type": "Point", "coordinates": [ -78.49573199999998, 38.056187 ] } }
+,
+{ "type": "Feature", "id": 2, "properties": { "NAME": "Harris Teeter", "TEL": "434) 984-2900", "URL": "http:\/\/www.harristeeter.com", "ADRESS1": "975 Emmet Street, Barracks Rd Shopping Center", "ADDRESS2": null, "CITY": "Charlottesville", "ZIP": 22905.0 }, "geometry": { "type": "Point", "coordinates": [ -78.50448, 38.050018 ] } }
 
 ]
 }

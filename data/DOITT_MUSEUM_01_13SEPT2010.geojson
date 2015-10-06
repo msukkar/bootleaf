@@ -3,6 +3,7 @@
                                                                                 
 "features": [
 { "type": "Feature", "id": 0, "properties": { "NAME": "The Haven", "TEL": "(434) 973-1234", "URL": "http:\/\/www.thehaven.org", "ADDRESS1": "112 Market St", "ADDRES2": null, "CITY": "Charlottesville", "ZIP": 22902.0 }, "geometry": { "type": "Point", "coordinates": [ -78.48148950000001, 38.03131800000001 ] } },
+
 { "type": "Feature", "id": 1, "properties": { "NAME": "Loaves and Fishes", "TEL": "(434) 996-7868", "URL": "http:\/\/www.cvilleloavesandfishes.org", "ADDRESS1": "2050 Lambs Rd", "ADDRES2": null, "CITY": "Charlottesville", "ZIP": 22901.0 }, "geometry": { "type": "Point", "coordinates": [ -78.50051400000001 , 38.077935] } },
 
 { "type": "Feature", "id": 2, "properties": { "NAME": "Salvation Army", "TEL": "(434) 295-4058", "URL": "http:\/\/www.virginiasalvationarmy.org\/charlottesvilleva", "ADDRESS1": "207 Ridge St", "ADDRES2": null, "CITY": "Charlottesville", "ZIP": 22901.0 }, "geometry": { "type": "Point", "coordinates": [ -78.486399 ,38.028999 ] } }
