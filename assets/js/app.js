@@ -1,5 +1,9 @@
 var map, featureList, boroughSearch = [], theaterSearch = [], museumSearch = [];
 
+$(function() {
+    $( "#datepicker" ).datepicker();
+  });
+
 $(window).resize(function() {
   sizeLayerControl();
 });
@@ -14,6 +18,12 @@ $(document).on("mouseover", ".feature-row", function(e) {
 });
 
 $(document).on("mouseout", ".feature-row", clearHighlight);
+
+$("#add-btn").click(function() {
+  $("#addModal").modal("show");
+  $(".navbar-collapse.in").collapse("hide");
+  return false;
+});
 
 $("#about-btn").click(function() {
   $("#aboutModal").modal("show");
@@ -488,6 +498,10 @@ var layerControl = L.control.groupedLayers(baseLayers, groupedOverlays, {
   collapsed: isCollapsed
 }).addTo(map);
 
+
+$('.send').click(function(){
+ 
+})
 /* Highlight search box text on click */
 $("#searchbox").click(function () {
   $(this).select();

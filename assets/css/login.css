@@ -1,0 +1,135 @@
+html, body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  /* background-image: url("https://unsplash.imgix.net/uploads/14135967189272ee843f8/f9c22c58?q=75&fm=jpg&s=cb5b8e149a0a516a43ba6f2166ac9949"); */
+  /*
+  https://images.unsplash.com/photo-1422919869950-5fdedb27cde8?q=80&fm=jpg&s=79e6ea67e8fd37af2833db624571ff0d
+  https://images.unsplash.com/photo-1430931071372-38127bd472b8?q=80&fm=jpg&s=557865ec59b115d21ed55f086dd67ca7
+  https://images.unsplash.com/reserve/oMRKkMc4RSq7N91OZl0O_IMG_8309.jpg?q=80&fm=jpg&s=9f0adb6c4d9775850a615a4fda2083fa
+  https://images.unsplash.com/reserve/EnF7DhHROS8OMEp2pCkx_Dufer%20food%20overhead%20hig%20res.jpg?q=80&fm=jpg&s=79cda1064d9829ad3cadbf437e6c55e0
+  */
+
+
+  /*background-image: url("https://images.unsplash.com/photo-1422919869950-5fdedb27cde8?q=80&fm=jpg&s=79e6ea67e8fd37af2833db624571ff0d");*/
+  background-image: url("../img/login-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.login-logo {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 60px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+  display: inline-block;
+}
+
+#wrapper {
+  width: 380px;
+  padding-top: 100px;
+  text-align: center;
+}
+
+.form-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  padding-bottom: 30px;
+}
+
+.center-h {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input[type=text],
+input[type=password] {
+  color: #222222;
+  width: 280px;
+  height: 40px;
+  line-height: 24px;
+  font-size: 16px;
+  padding: 0px 10px;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid #FFFFFF;
+  margin-bottom: 16px;
+}
+
+.wrapper-button {
+  background: none;
+  padding: none;
+  border: none;
+}
+
+.path {
+  stroke-dasharray: 684;
+  /*
+  -webkit-animation: dash 1s linear alternate infinite;
+  animation: dash 1s linear alternate infinite;
+  */
+
+  -webkit-animation: dashback 0.3s ease-in-out;
+  animation: dashback 0.3s ease-in-out;
+  stroke-dashoffset: 684;
+}
+
+.path:hover {
+  -webkit-animation: dash 0.5s ease-in-out;
+  animation: dash 0.5s ease-in-out;
+
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.path rect:active {
+  fill: rgba(255, 255, 255, 0.5);
+}
+
+@-webkit-keyframes dashback {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 684;
+  }
+}
+
+@keyframes dashback {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 684;
+  }
+}
+
+@-webkit-keyframes dash {
+  from {
+    stroke-dashoffset: 684;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 684;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
