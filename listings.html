@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.css">
+<link rel="stylesheet" href="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.css">
+<link rel="stylesheet" href="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css">
+<link rel="stylesheet" href="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.css">
+<link rel="stylesheet" href="assets/leaflet-groupedlayercontrol/leaflet.groupedlayercontrol.css">
+<link rel="stylesheet" href="assets/css/app.css">
+<title> Pannal </title>
+</head>
+<body>
+
+ <body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <div class="navbar-icon-container">
+            <a href="#" class="navbar-icon pull-right visible-xs" id="nav-btn"><i class="fa fa-bars fa-lg white"></i></a>
+            <a href="#" class="navbar-icon pull-right visible-xs" id="add-btn"><i class="fa fa-plus fa-lg white"></i></a>
+          </div>
+          <a class="navbar-brand" href="#">Pannal</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group has-feedback">
+                 <a href="#" class="navbar-icon pull-right visible-xs" id="add-btn"><i class="fa fa-plus fa-lg white"></i></a>
+            </div>
+          </form>
+          <ul class="nav navbar-nav">
+            <!-- <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="about-btn"><i class="fa fa-question-circle white"></i>&nbsp;&nbsp;About</a></li> -->
+            <li class="dropdown">
+              <a id="toolsDrop" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-globe white"></i>&nbsp;&nbsp;Tools <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="full-extent-btn"><i class="fa fa-arrows-alt"></i>&nbsp;&nbsp;Zoom To Full Extent</a></li>
+                <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="legend-btn"><i class="fa fa-picture-o"></i>&nbsp;&nbsp;Show Legend</a></li>
+                <li class="divider hidden-xs"></li>
+                <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="login-btn"><i class="fa fa-user"></i>&nbsp;&nbsp;Login</a></li>
+              </ul>
+            </li>
+            <!-- <li class="dropdown">
+                <a class="dropdown-toggle" id="downloadDrop" href="#" role="button" data-toggle="dropdown"><i class="fa fa-cloud-download white"></i>&nbsp;&nbsp;Download <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="data/boroughs.geojson" download="boroughs.geojson" target="_blank" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-download"></i>&nbsp;&nbsp;Boroughs</a></li>
+                  <li><a href="data/subways.geojson" download="subways.geojson" target="_blank" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-download"></i>&nbsp;&nbsp;Subway Lines</a></li>
+                  <li><a href="data/DOITT_THEATER_01_13SEPT2010.geojson" download="theaters.geojson" target="_blank" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-download"></i>&nbsp;&nbsp;Theaters</a></li>
+                  <li><a href="data/DOITT_MUSEUM_01_13SEPT2010.geojson" download="museums.geojson" target="_blank" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-download"></i>&nbsp;&nbsp;Museums</a></li>
+                </ul>
+            </li> -->
+            <li class="hidden-xs"><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="list-btn"><i class="fa fa-list white"></i>&nbsp;&nbsp;POI List</a></li>
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+<div class = "listings">
+	<div class = "row">
+		<div class = "card col-md-6">
+				<div class = "image">
+					<img src = "assets/img/kroger.png" style = "float:left" width ="60px" height="60px">
+				</div>
+
+				<div class = "content">
+				 	Kroger pickup  <br/>
+					Wednesday, October 7, 9:00AM<br/>
+					<a href = "map.html"> Claim this pickup </a>
+				</div>
+		</div>
+	
+		<div class = "card col-md-6">
+				<div class = "image">
+
+					<img src = "assets/img/joe.png" style = "float:left" width ="60px" height="60px">
+				</div>
+				<div class = "content">
+				 	Trader Joes pickup <br/>
+					Wednesday, October 7, 2:00PM<br/>
+					<a href = "map.html"> Claim this pickup </a>
+				</div>
+		</div>
+	
+		<div class = "card col-md-6">
+				<div class = "image">
+					<img src = "assets/img/costco.png" style = "float:left" width ="60px" height="60px">
+				</div>
+				<div class = "content">
+				 	Costco pickup <br/>
+					Wednesday, October 7, 3:00PM<br/>
+					<a href = "map.html"> Claim this pickup </a>
+				</div>
+		</div>
+
+		<div class = "card col-md-6">
+				<div class = "image">
+					<img src = "assets/img/sam.jpg" style = "float:left" width ="60px" height="60px">
+				</div>
+				<div class = "content">
+				 	Sam's club pickup <br/>
+					Sunday, October 11, 7:00PM<br/>
+					<a href = "map.html"> Claim this pickup </a>
+				</div>
+		</div>
+
+		<div class = "card col-md-12">
+				<div class = "image">
+					<img src = "assets/img/bodos.jpg" style = "float:left" width ="60px" height="60px">
+				</div>
+				<div class = "content">
+				 	Bodos pickup <br/>
+					Sunday, November 1, 5:00PM
+					<a href = "map.html"> Claim this pickup </a>
+				</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog">
+<div class="modal-dialog">
+ <div class="modal-content">
+   <div class="modal-header">
+     <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
+     <h4 class="modal-title text-primary" id="feature-title"></h4>
+   </div>
+   <div class="modal-body" id="feature-info">
+   	 <form id="create-form">
+              <fieldset>
+                <div class="form-group">
+                <label for="Urgency">Urgency:</label>
+                  	<select>
+			  	<option value="immediate">Immediate</option>
+			  	<option value="scheduled">Scheduled</option>
+	        	</select>
+                  <label for="Location"> Location:</label>
+                  <input type = "text">
+                  <br/>
+                  
+
+                </div>
+                <div class = "time">
+                	<label for="time">Time:</label>
+                	<input type = "text">
+                </div>
+                <div class="form-group">
+                  <label for="date">Date: </label>
+                  <input type="text">
+                </div>
+              </fieldset>
+            </form>
+   </div>
+   <div class="modal-footer">
+     <button type = "button" class ="btn send" data-dismiss="modal">Submit</button>
+     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+   </div>
+ </div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.10.5/typeahead.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.js"></script>
+    <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>
+    <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.min.js"></script>
+    <script src="assets/leaflet-groupedlayercontrol/leaflet.groupedlayercontrol.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
