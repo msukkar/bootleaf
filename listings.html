@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.css">
 <link rel="stylesheet" href="assets/leaflet-groupedlayercontrol/leaflet.groupedlayercontrol.css">
 <link rel="stylesheet" href="assets/css/app.css">
-<title> Pannal </title>
+<title> FoodAssist </title>
 </head>
 <body>
 
@@ -21,13 +21,12 @@
             <a href="#" class="navbar-icon pull-right visible-xs" id="nav-btn"><i class="fa fa-bars fa-lg white"></i></a>
             <a href="#" class="navbar-icon pull-right visible-xs" id="add-btn"><i class="fa fa-plus fa-lg white"></i></a>
           </div>
-          <a class="navbar-brand" href="#">Pannal</a>
+          <a class="navbar-brand" href="#">FoodAssist</a>
         </div>
         <div class="navbar-collapse collapse">
           <form class="navbar-form navbar-right" role="search">
-            <div class="form-group has-feedback">
+           
                  <a href="#" class="navbar-icon pull-right visible-xs" id="add-btn"><i class="fa fa-plus fa-lg white"></i></a>
-            </div>
           </form>
           <ul class="nav navbar-nav">
             <!-- <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="about-btn"><i class="fa fa-question-circle white"></i>&nbsp;&nbsp;About</a></li> -->
@@ -50,10 +49,12 @@
                 </ul>
             </li> -->
             <li class="hidden-xs"><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="list-btn"><i class="fa fa-list white"></i>&nbsp;&nbsp;POI List</a></li>
+             <li><a href="#" class="navbar-icon pull-right visible-xs" id="add-btn"><i class="fa fa-plus fa-lg white"></i></a></li>
           </ul>
         </div><!--/.navbar-collapse -->
       </div>
     </div>
+ <div class = "row">
 <div class = "listings">
 	<div class = "row">
 		<div class = "card col-md-6">
@@ -124,30 +125,38 @@
      <h4 class="modal-title text-primary" id="feature-title"></h4>
    </div>
    <div class="modal-body" id="feature-info">
+   	    <h1>Enter new pickup</h1>
+   	<table>
    	 <form id="create-form">
               <fieldset>
+                <tr>
                 <div class="form-group">
-                <label for="Urgency">Urgency:</label>
-                  	<select>
+
+                <td><label for="Urgency">Urgency:</label></td>
+                  	<td><select>
 			  	<option value="immediate">Immediate</option>
 			  	<option value="scheduled">Scheduled</option>
-	        	</select>
-                  <label for="Location"> Location:</label>
-                  <input type = "text">
+	        	</select></td>
+	        	</tr>
+	           <tr> 
+                  <td><label for="Location"> Location:</label></td>
+                 <td> <input type = "text"></td>
                   <br/>
+                  </tr>
                   
 
                 </div>
-                <div class = "time">
-                	<label for="time">Time:</label>
-                	<input type = "text">
-                </div>
-                <div class="form-group">
-                  <label for="date">Date: </label>
-                  <input type="text">
-                </div>
+                <tr><div class = "time">
+                	<td><label for="time">Time:</label></td>
+                	<td><input type = "text"></td>
+                </div></tr>
+                <tr><div class="form-group">
+                  <td><label for="date">Date: </label></td>
+                  <td><input type="text"></td>
+                </div></tr>
               </fieldset>
             </form>
+            </table>
    </div>
    <div class="modal-footer">
      <button type = "button" class ="btn send" data-dismiss="modal">Submit</button>
